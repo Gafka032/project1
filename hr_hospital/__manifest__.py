@@ -13,10 +13,11 @@
         'views/hr_hospital_menu.xml',
         'views/hr_hospital_doctor_views.xml',
         'views/hr_hospital_patient_views.xml',
-        'data/hr_hospital_disease_type_data.xml'
+        'data/hr_hospital_disease_type_data.xml',
     ],
     'demo': [
         'demo/hr_hospital_doctor_demo.xml',
+        'demo/hr.hospital.patient.demo.csv',
     ],
     'installable': True,
     'auto_install': False,

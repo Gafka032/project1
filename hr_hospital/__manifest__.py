@@ -1,6 +1,6 @@
 {
     'name': 'Hospital',
-    'version': '17.0.1.1.5',
+    'version': '17.0.2.3.2',
     'author': "Odoo School",
     'website': 'odoo.school',
     'license': 'OPL-1',
@@ -13,9 +13,10 @@
         'views/hr_hospital_menu.xml',
         'views/hr_hospital_doctor_views.xml',
         'views/hr_hospital_patient_views.xml',
+        'data/hr_hospital_disease_type_data.xml'
     ],
     'demo': [
-
+        'demo/hr_hospital_doctor_demo.xml',
     ],
     'installable': True,
     'auto_install': False,

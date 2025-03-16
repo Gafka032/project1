@@ -1,0 +1,4 @@
+"id",name,hh_doctor_id:id,hh_disease_type_id:id
+hh_patient_1,Ashley Wililiams,hh_doctor_demo_1,hh_disease_type_data_3
+hh_patient_2,John Price,hh_doctor_demo_2,hh_disease_type_data_1
+hh_patient_3,James Ghost,hh_doctor_demo_3,hh_disease_type_data_2

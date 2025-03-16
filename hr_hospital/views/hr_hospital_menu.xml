@@ -1,0 +1,17 @@
+<odoo>
+    <menuitem id="hr_hospital_main_menu"
+              web_icon="hr-hospital,static/description/icon.png"
+              name="Hospital" squence="300"/>
+
+    <menuitem id="hr_hospital_menu_doctor"
+              parent="hr_hospital_main_menu"
+              name="Doctors" squence="100"/>
+
+    <menuitem id="hr_hospital_menu_patient"
+              parent="hr_hospital_main_menu"
+              name="Patients" squence="100"/>
+
+    <menuitem id="hr_hospital_menu_main_settings"
+            parent="hr_hospital_main_menu"
+            name="Settings" sequence="900"/>
+</odoo>

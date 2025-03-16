@@ -5,6 +5,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="doctor_id"/>
+                <field name="disease_type_id"/>
+
             </tree>
         </field>
     </record>
@@ -19,8 +22,11 @@
                     <group>
                         <group>
                             <field name="name"/>
+                            <field name="doctor_id"/>
                         </group>
-                        <group></group>
+                        <group>
+                            <field name="disease_type_id"/>
+                        </group>
                     </group>
                 </sheet>
             </form>

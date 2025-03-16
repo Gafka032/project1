@@ -3,13 +3,9 @@
               web_icon="hr-hospital,static/description/icon.png"
               name="Hospital" squence="300"/>
 
-    <menuitem id="hr_hospital_menu_doctor"
+    <menuitem id="hr_hospital_menu_list"
               parent="hr_hospital_main_menu"
-              name="Doctors" squence="100"/>
-
-    <menuitem id="hr_hospital_menu_patient"
-              parent="hr_hospital_main_menu"
-              name="Patients" squence="100"/>
+              name="Lists" squence="100"/>
 
     <menuitem id="hr_hospital_menu_main_settings"
             parent="hr_hospital_main_menu"

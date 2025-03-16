@@ -2,10 +2,10 @@
     'name': 'Hospital',
     'version': '17.0.2.3.6',
     'author': "Odoo School",
-    'website': 'odoo.school',
+    'website': 'https://odoo.school/',
     'license': 'OPL-1',
     'category': 'Human Resources',
-    'depends':[
+    'depends': [
         'base',
     ],
     'data': [

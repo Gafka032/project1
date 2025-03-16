@@ -17,7 +17,7 @@
     ],
     'demo': [
         'demo/hr_hospital_doctor_demo.xml',
-        'demo/hr.hospital.patient.demo.csv',
+        'demo/hr.hospital.patient.csv',
     ],
     'installable': True,
     'auto_install': False,

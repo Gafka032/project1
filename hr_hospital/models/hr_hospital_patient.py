@@ -13,5 +13,5 @@ class HrHospitalPatient(models.Model):
 
     disease_type_id = fields.Many2one(
         comodel_name='hr.hospital.disease.type',
-        string='Disease type'
+        string="Disease type"
     )

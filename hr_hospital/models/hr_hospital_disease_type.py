@@ -1,13 +1,10 @@
 from odoo import models, fields
 
 
-
 class HrHospitalDiseaseType(models.Model):
 
     _name = 'hr.hospital.disease.type'
 
-
     _description = "Disease type"
-
 
     name = fields.Char()

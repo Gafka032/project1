@@ -7,6 +7,11 @@
               parent="hr_hospital_main_menu"
               name="Lists" sequence="100"/>
 
+    <menuitem id="hr_hospital_menu_disease_type"
+              action="action_hr_hospital_disease_type_window"
+              parent="hr_hospital_main_menu"
+              name="Disease Types" sequence="10"/>
+
     <menuitem id="hr_hospital_menu_main_settings"
             parent="hr_hospital_main_menu"
             name="Settings" sequence="900"/>

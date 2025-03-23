@@ -1,7 +1,7 @@
 from odoo import models, fields
 
-class HrHospitalPerson(models.AbstractModel):
-    _name = 'hr.hospital.person'
+class HrHospitalPersonMixin(models.AbstractModel):
+    _name = 'hr.hospital.person.mixin'
     _description = 'Person'
 
     name = fields.Char(
@@ -12,13 +12,14 @@ class HrHospitalPerson(models.AbstractModel):
         string='Phone number',
     )
 
-    photo = fields.Binary(
+    photo = fields.Image(
         string='Photo',
     )
 
-    sex = fields.Selection(
+    gender = fields.Selection(
         values=[
             ('male', 'Male'),
-                ('female', 'Female'),
+            ('female', 'Female'),
         ],
     )
+

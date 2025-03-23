@@ -3,8 +3,9 @@ from odoo import models, fields
 class HrHospitalPersonMixin(models.AbstractModel):
     _name = 'hr.hospital.person.mixin'
     _description = 'Person'
+    _abstract = True
 
-    name = fields.Char(
+    person_name = fields.Char(
         string='Name, Surname',
     )
 
@@ -17,9 +18,11 @@ class HrHospitalPersonMixin(models.AbstractModel):
     )
 
     gender = fields.Selection(
-        values=[
+        selection=[
             ('male', 'Male'),
             ('female', 'Female'),
+            ('other', 'Other')
         ],
+        default='other',
     )
 

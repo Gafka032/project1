@@ -34,7 +34,7 @@
                         <group>
                             <field name="active"/>
                             <field name="res_partner_id"/>
-                            <field name="phone"/>
+                            <field name="telephone"/>
                             <field name="passport_data"/>
                             <field name="description"/>
                             <field name="disease_type_id"/>

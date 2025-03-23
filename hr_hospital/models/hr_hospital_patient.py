@@ -49,7 +49,7 @@ class HrHospitalPatient(models.Model):
 
     birthday_date = fields.Date(
         string='Date of birth',
-        required=True,
+      #  required=True,
         help="Patient's birthday",
     )
 
@@ -57,7 +57,7 @@ class HrHospitalPatient(models.Model):
         string='Age',
         compute='_compute_age',
         store=True,
-        readonly=False,
+        readonly=True,
         help="Patient's age",
     )
 

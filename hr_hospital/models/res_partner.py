@@ -12,3 +12,8 @@ class ResPartner(models.Model):
         comodel_name='hr.hospital.doctor',
         string='Hospital Doctors',
     )
+
+    hr_hospital_patient_ids = fields.Many2many(
+        comodel_name='hr.hospital.patient',
+        string='Hospital Patients',
+    )

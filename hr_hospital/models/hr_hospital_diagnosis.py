@@ -16,7 +16,7 @@ class HrHospitalDiagnosis(models.Model):
         copy=False,
     )
 
-    patient_visit_id = fields.Many2one(
+    visit_id = fields.Many2one(
         related='patient_id.visit_id',
         store=True,
         string='Visit',

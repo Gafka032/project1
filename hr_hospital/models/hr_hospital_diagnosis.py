@@ -32,6 +32,7 @@ class HrHospitalDiagnosis(models.Model):
     doctor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
         string='Doctor',
+        required=True,
         help='Doctor',
     )
 
@@ -57,6 +58,6 @@ class HrHospitalDiagnosis(models.Model):
     @api.model
     def create(self, vals_list):
         res = super().create(vals_list)
-        if not res.is_intern:
+        if res.doctor_id and not res.is_intern:
             res.update({'is_approved': True})
         return res

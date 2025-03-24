@@ -46,6 +46,6 @@ class HrHospitalDoctor(models.Model):
     mentor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
         string='Mentor',
-        domain="[('is_intern', '=', True)]",
+        domain="[('is_intern', '=', False)]",
         help="Intern's mentor",
     )

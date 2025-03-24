@@ -54,6 +54,6 @@
 
     <menuitem id="hr_hospital_menu_patient"
               action="action_hr_hospital_patient_window"
-              parent="hr_hospital_menu_list"
+              parent="hr_hospital_menu_persons"
               name="Patients" sequence="200"/>
 </odoo>

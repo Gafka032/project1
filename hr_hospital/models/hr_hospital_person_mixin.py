@@ -14,7 +14,7 @@ class HrHospitalPersonMixin(models.AbstractModel):
     )
 
     photo = fields.Image(
-        string='Photo',
+        string='Photo of person',
     )
 
     gender = fields.Selection(
@@ -25,4 +25,3 @@ class HrHospitalPersonMixin(models.AbstractModel):
         ],
         default='other',
     )
-

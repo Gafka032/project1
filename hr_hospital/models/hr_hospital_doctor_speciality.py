@@ -10,7 +10,7 @@ class HrHospitalDoctorSpeciality(models.Model):
     _description = 'Doctor speciality'
 
     name = fields.Char(
-        string='Name',
+        string='Name of speciality',
     )
 
     active = fields.Boolean(

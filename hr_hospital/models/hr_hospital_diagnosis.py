@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 _logger = logging.getLogger(__name__)
 
+
 class HrHospitalDiagnosis(models.Model):
     _name = 'hr.hospital.diagnosis'
     _description = 'Diagnosis'

@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class HrHospitalPersonMixin(models.AbstractModel):
     _name = 'hr.hospital.person.mixin'
     _description = 'Person'
@@ -14,7 +15,7 @@ class HrHospitalPersonMixin(models.AbstractModel):
     )
 
     photo = fields.Image(
-        string='Photo',
+        string='Photo of person',
     )
 
     gender = fields.Selection(
@@ -25,4 +26,3 @@ class HrHospitalPersonMixin(models.AbstractModel):
         ],
         default='other',
     )
-

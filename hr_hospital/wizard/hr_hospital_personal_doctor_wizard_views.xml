@@ -1,5 +1,4 @@
 <odoo>
-
     <record id="hr_hospital_personal_doctor_wizard_form" model="ir.ui.view">
         <field name="name">hr.hospital.personal.doctor.wizard.form</field>
         <field name="model">hr.hospital.personal.doctor.wizard</field>
@@ -27,5 +26,4 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
-
 </odoo>

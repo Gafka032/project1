@@ -1,0 +1,1 @@
+from . import hr_hospital_personal_doctor_wizard

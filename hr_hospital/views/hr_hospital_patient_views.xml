@@ -4,6 +4,9 @@
         <field name="model">hr.hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
+                <header>
+                    <button name="%(hr_hospital.hr_hospital_personal_doctor_wizard_action)d" string="Change personal doctor" type="action"/>
+                </header>
                 <field name="person_name"/>
                 <field name="doctor_id"/>
                 <field name="res_partner_id"/>

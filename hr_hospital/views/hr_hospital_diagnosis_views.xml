@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="hr_hospital_diagnosis_tree" model="ir.ui.view">
         <field name="name">hr.hospital.diagnosis.tree ()</field>
@@ -6,7 +5,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="patient_visit_id"/>
+                <field name="visit_id"/>
                 <field name="patient_id"/>
                 <field name="doctor_id"/>
                 <field name="disease_id"/>
@@ -24,7 +23,7 @@
                     <group>
                         <field name="active"/>
                         <field name="name"/>
-                        <field name="patient_visit_id"/>
+                        <field name="visit_id"/>
                         <field name="patient_id"/>
                         <field name="disease_id"/>
                         <field name="appointment_treatment"/>

@@ -22,8 +22,8 @@ class HrHospitalDisease(models.Model):
         translate=True,
     )
 
-    category_id = fields.Many2one(
-        comodel_name='hr.hospital.disease.category',
-        string='Disease category',
+    type_id = fields.Many2one(
+        comodel_name='hr.hospital.disease.type',
+        string='Disease type',
         required=True
     )

@@ -50,7 +50,7 @@ class HrHospitalVisit(models.Model):
 
     diagnosis_id = fields.One2many(
         comodel_name='hr.hospital.diagnosis',
-        inverse_name='patient_visit_id',
+        inverse_name='visit_id',
         string='Diagnosis',
     )
 

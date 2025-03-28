@@ -65,4 +65,3 @@ class HrHospitalDiseaseType(models.Model):
                 )
             else:
                 category.complete_name = category.name
-

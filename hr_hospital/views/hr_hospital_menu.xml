@@ -5,17 +5,15 @@
 
     <menuitem id="hr_hospital_menu_persons"
               parent="hr_hospital_main_menu"
-              name="Persons" sequence="100"/>
+              name="Persons" sequence="10"/>
 
-    <menuitem id="hr_hospital_menu_disease_type"
-              action="action_hr_hospital_disease_type_window"
+    <menuitem id="hr_hospital_menu_diseases"
               parent="hr_hospital_main_menu"
-              name="Disease Types" sequence="10"/>
+              name="Diseases" sequence="20"/>
 
     <menuitem id="hr_hospital_menu_diagnosis"
-              action="action_hr_hospital_diagnosis_window"
               parent="hr_hospital_main_menu"
-              name="Diagnosis" sequence="200"/>
+              name="Diagnosis" sequence="20"/>
 
     <menuitem id="hr_hospital_menu_main_settings"
             parent="hr_hospital_main_menu"

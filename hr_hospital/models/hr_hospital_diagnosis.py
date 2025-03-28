@@ -17,9 +17,8 @@ class HrHospitalDiagnosis(models.Model):
     )
 
     visit_id = fields.Many2one(
-        related='patient_id.visit_id',
-        store=True,
-        string='Visit',
+        comodel_name='hr.hospital.visit',
+        string='Patient visit',
         help='Visit',
     )
 

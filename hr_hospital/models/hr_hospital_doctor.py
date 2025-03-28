@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields
 import logging
 
 _logger = logging.getLogger(__name__)
@@ -11,8 +11,8 @@ class HrHospitalDoctor(models.Model):
     _description = 'Doctor'
 
     name = fields.Char(
-        string='Name, Surname',
-        help="Doctor's name",
+        string="Doctor's name",
+        help="Doctor's name, Surname",
     )
 
     active = fields.Boolean(

@@ -11,7 +11,7 @@ class HrHospitalPatient(models.Model):
     _description = 'Patient'
 
     name = fields.Char(
-        string='Name, Surname',
+        string="Patient's name",
         help="Patient's name and surname",
     )
 

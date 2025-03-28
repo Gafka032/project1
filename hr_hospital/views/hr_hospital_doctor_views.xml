@@ -4,6 +4,9 @@
         <field name="model">hr.hospital.doctor</field>
         <field name="arch" type="xml">
             <tree>
+                <header>
+                    <button name="%(hr_hospital.hr_hospital_report_diseases_wizard_action)d" string="Diseases report" type="action"/>
+                </header>
                 <field name="person_name"/>
                 <field name="description"/>
                 <field name="res_partner_id"/>
@@ -16,7 +19,9 @@
         <field name="model">hr.hospital.doctor</field>
         <field name="arch" type="xml">
             <form>
-                <header></header>
+                <header>
+                    <button name="%(hr_hospital.hr_hospital_report_diseases_wizard_action)d" string="Diseases report" type="action"/>
+                </header>
                 <sheet>
                     <field name="photo" widget="image" class="oe_avatar"/>
                     <field name="active"/>

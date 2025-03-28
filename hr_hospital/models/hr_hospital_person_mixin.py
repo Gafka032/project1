@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class HrHospitalPersonMixin(models.AbstractModel):
     _name = 'hr.hospital.person.mixin'
     _description = 'Person'

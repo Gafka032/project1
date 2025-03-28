@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 logger = logging.getLogger(__name__)
 
+
 class HrHospitalPatient(models.Model):
 
     _name = 'hr.hospital.patient'
@@ -49,7 +50,7 @@ class HrHospitalPatient(models.Model):
 
     birthday_date = fields.Date(
         string='Date of birth',
-      #  required=True,
+        #  required=True,
         help="Patient's birthday",
     )
 

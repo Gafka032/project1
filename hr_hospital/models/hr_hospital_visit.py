@@ -58,7 +58,8 @@ class HrHospitalVisit(models.Model):
     def _ondelete(self):
         self.ensure_one()
         if self.diagnosis_id:
-            raise exceptions.UserError_("You cannot delete visit with diagnosis.")
+            raise exceptions.UserError_("You cannot delete visit with "
+                                        "diagnosis.")
 
     @api.constrains('scheduled_visit_date', 'doctor_id', 'patient_id')
     def _constrains_scheduled_visit_date_doctor_patient(self):
@@ -76,18 +77,19 @@ class HrHospitalVisit(models.Model):
         )
         if result_count != 0:
             raise exceptions.UserError_("One patient cannot have two visits "
-                                       "at the same day.")
+                                        "at the same day.")
 
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
         self.ensure_one()
         if self.state == 'completed':
             raise exceptions.ValidationError_("It is not possible to change "
-                                             "the visit date after the visit "
-                                             "is completed.")
+                                              "the visit date after the visit "
+                                              "is completed.")
 
     @api.constrains('active')
     def _constrains_active(self):
         self.ensure_one()
         if not self.active and self.diagnosis_id:
-            raise exceptions.UserError_("You cannot archive visit with diagnosis.")
+            raise exceptions.UserError_("You cannot archive visit with "
+                                        "diagnosis.")

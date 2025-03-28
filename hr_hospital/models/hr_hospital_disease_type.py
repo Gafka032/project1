@@ -4,6 +4,7 @@ from odoo import models, fields, api, exceptions
 
 _logger = logging.getLogger(__name__)
 
+
 class HrHospitalDiseaseType(models.Model):
     _name = 'hr.hospital.disease.type'
     _description = 'Disease type'
@@ -11,7 +12,6 @@ class HrHospitalDiseaseType(models.Model):
     _parent_store = True
     _rec_name = 'complete_name'
     _order = 'complete_name'
-
 
     name = fields.Char(
         string='Name of disease type',
@@ -47,7 +47,8 @@ class HrHospitalDiseaseType(models.Model):
     @api.constrains('parent_id')
     def _check_category_recursion(self):
         if not self._check_recursion():
-            raise exceptions.ValidationError_('You cannot create recursive categories.')
+            raise exceptions.ValidationError_('You cannot create recursive '
+                                              'categories.')
 
     @api.model
     def name_create(self, name):

@@ -4,6 +4,7 @@ from odoo import models, fields
 
 _logger = logging.getLogger(__name__)
 
+
 class HrHospitalPersonalDoctorWizard(models.TransientModel):
     _name = 'hr.hospital.personal.doctor.wizard'
     _description = 'Mass redefinition of the personal doctor for patients'

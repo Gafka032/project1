@@ -7,7 +7,7 @@
                 <header>
                     <button name="%(hr_hospital.hr_hospital_personal_doctor_wizard_action)d" string="Change personal doctor" type="action"/>
                 </header>
-                <field name="person_name"/>
+                <field name="name"/>
                 <field name="doctor_id"/>
                 <field name="res_partner_id"/>
                 <field name="disease_type_id"/>
@@ -28,7 +28,6 @@
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="person_name"/>
                             <field name="birthday_date"/>
                             <field name="age_count"/>
                             <field name="gender"/>

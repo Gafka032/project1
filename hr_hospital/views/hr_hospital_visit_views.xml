@@ -1,0 +1,48 @@
+<odoo>
+    <record id="hr_hospital_visit_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.tree ()</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="scheduled_visit_date"/>
+                <field name="visit_date"/>
+                <field name="doctor_id"/>
+                <field name="patient_id"/>
+                <field name="description"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_hospital_visit_form" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.form ()</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="scheduled_visit_date"/>
+                        <field name="doctor_id"/>
+                        <field name="patient_id"/>
+                        <field name="visit_date"/>
+                        <field name="diagnosis_id"/>
+                        <field name="description"/>
+                    </group>
+                    <group>
+                        <field name="active"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="action_hr_hospital_visit_window" model="ir.actions.act_window">
+        <field name="name">Patient visits</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.hospital.visit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

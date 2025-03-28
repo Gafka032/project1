@@ -11,10 +11,6 @@ class HrHospitalPatient(models.Model):
     _inherit = 'hr.hospital.person.mixin'
     _description = 'Patient'
 
-    name = fields.Char(
-        string="Patient's name",
-        help="Patient's name and surname",
-    )
 
     active = fields.Boolean(
         default=True,

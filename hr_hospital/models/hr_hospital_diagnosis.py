@@ -57,7 +57,8 @@ class HrHospitalDiagnosis(models.Model):
 
     @api.model
     def create(self, vals_list):
-        res = super().create(vals_list)
-        if res.doctor_id and not res.is_intern:
-            res.update({'is_approved': True})
-        return res
+        records = super(HrHospitalDiagnosis, self).create(vals_list)
+        for record in records:
+            if not record.is_intern:
+                record.is_approved = True
+        return records

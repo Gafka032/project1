@@ -6,7 +6,7 @@ class HrHospitalPersonMixin(models.AbstractModel):
     _description = 'Person'
     _abstract = True
 
-    person_name = fields.Char(
+    name = fields.Char(
         string='Name, Surname',
     )
 

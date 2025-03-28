@@ -1,4 +1,4 @@
-"id",name,doctor_id:id,disease_type_id:id
-hh_patient_1,Ashley Wililiams,hr_hospital.hh_doctor_demo_1,hh_disease_type_data_3
-hh_patient_2,John Price,hr_hospital.hh_doctor_demo_2,hh_disease_type_data_1
-hh_patient_3,James Ghost,hr_hospital.hh_doctor_demo_3,hh_disease_type_data_2
+"id",person_name,description,birthday_date,gender,telephone,doctor_id:id,disease_type_id:id
+hh_patient_1,Ashley Wililiams,,,,,hr_hospital.hh_doctor_demo_1,hh_disease_type_data_3
+hh_patient_2,John Price,,,,,hr_hospital.hh_doctor_demo_2,hh_disease_type_data_1
+hh_patient_3,James Ghost,,,,,hr_hospital.hh_doctor_demo_3,hh_disease_type_data_2

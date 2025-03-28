@@ -1,13 +1,22 @@
 <odoo>
     <record id="hh_doctor_demo_1" model="hr.hospital.doctor">
-    <field name="name">John Doe</field>
+        <field name="name">John Doe</field>
+        <field name="person_name">John Doe</field>
+        <field name="gender">male</field>
+        <field name="telephone">+11111111111</field>
     </record>
 
     <record id="hh_doctor_demo_2" model="hr.hospital.doctor">
-    <field name="name">Jane Doe</field>
+        <field name="name">Jane Doe</field>
+        <field name="person_name">Jane Doe</field>
+        <field name="gender">female</field>
+        <field name="telephone">+9999999999</field>
     </record>
 
     <record id="hh_doctor_demo_3" model="hr.hospital.doctor">
-    <field name="name">James Smith</field>
+        <field name="name">James Smith</field>
+        <field name="person_name">James Smith</field>
+        <field name="gender">male</field>
+        <field name="telephone">+33333333</field>
     </record>
 </odoo>

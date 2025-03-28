@@ -17,7 +17,7 @@
         'views/hr_hospital_patient_views.xml',
         'views/hr_hospital_disease_views.xml',
         'views/hr_hospital_disease_type_views.xml',
-        'data/hr_hospital_disease_type_data.xml',
+        'data/hr_hospital_disease_data.xml',
     ],
     'demo': [
         'demo/hr_hospital_doctor_demo.xml',

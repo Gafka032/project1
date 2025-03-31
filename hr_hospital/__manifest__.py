@@ -1,6 +1,6 @@
 {
     'name': 'Hospital',
-    'version': '17.0.2.3.7',
+    'version': '17.0.3.6.4',
     'author': "Odoo School",
     'website': 'https://odoo.school/',
     'license': 'OPL-1',

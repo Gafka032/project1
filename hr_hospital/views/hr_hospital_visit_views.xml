@@ -41,6 +41,23 @@
         </field>
     </record>
 
+    <record id="hr_hospital_visit_search" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.search (hr_hospital_visit)</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <group string="Group by">
+                    <filter string="State" name="state" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Doctor" name="doctor_id" domain="[]" context="{'group_by': 'doctor_id'}"/>
+                    <filter string="Patient" name="patient_id" domain="[]" context="{'group_by': 'patient_id'}"/>
+                </group>
+                <searchpanel>
+                    <field name="state" select="multi" expand="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
     <record id="hr_hospital_visit_calendar" model="ir.ui.view">
         <field name="name">hr.hospital.visit.calendar (hr_hospital_visit)</field>
         <field name="model">hr.hospital.visit</field>

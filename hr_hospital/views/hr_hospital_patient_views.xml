@@ -57,6 +57,17 @@
         </field>
     </record>
 
+    <record id="hr_hospital_patient_search" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.search (hr_hospital_patient)</field>
+        <field name="model">hr.hospital.patient</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <field name="name" string="Full name"/>
+                <field name="telephone" string="Phone"/>
+            </search>
+        </field>
+    </record>
+
     <record id="action_hr_hospital_patient_window" model="ir.actions.act_window">
         <field name="name">Patient</field>
         <field name="type">ir.actions.act_window</field>

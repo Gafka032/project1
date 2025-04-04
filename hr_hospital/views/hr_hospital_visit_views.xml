@@ -6,6 +6,7 @@
         <field name="model">hr.hospital.visit</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="state"/>
                 <field name="scheduled_visit_date"/>
                 <field name="visit_date"/>
                 <field name="doctor_id"/>

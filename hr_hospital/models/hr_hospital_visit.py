@@ -66,7 +66,7 @@ class HrHospitalVisit(models.Model):
         self.ensure_one()
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
         end_date = self.scheduled_visit_date.strftime("%Y-%m-%d 23:59:59")
-        result_count = self.env['hr.hospital.patient.visit'].search_count(
+        result_count = self.env['hr.hospital.visit'].search_count(
             domain=[
                 ('doctor_id', '=', self.doctor_id.id),
                 ('patient_id', '=', self.patient_id.id),

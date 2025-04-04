@@ -76,20 +76,25 @@ class HrHospitalVisit(models.Model):
             ]
         )
         if result_count != 0:
-            raise exceptions.UserError_("One patient cannot have two visits "
-                                        "at the same day.")
+            raise exceptions.UserError(
+                ("One patient cannot have two visits "
+                                        "at the same day."))
 
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
         self.ensure_one()
-        if self.state == 'completed':
-            raise exceptions.ValidationError_("It is not possible to change "
+        today_date = fields.Datetime.today().strftime("%Y-%m-%d")
+        start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
+        if self.state == 'completed' and start_date < today_date:
+            raise exceptions.ValidationError(
+                ("It is not possible to change "
                                               "the visit date after the visit "
-                                              "is completed.")
+                                              "is completed."))
 
     @api.constrains('active')
     def _constrains_active(self):
         self.ensure_one()
         if not self.active and self.diagnosis_id:
-            raise exceptions.UserError_("You cannot archive visit with "
-                                        "diagnosis.")
+            raise exceptions.UserError(
+                ("You cannot archive visit with "
+                                        "diagnosis."))

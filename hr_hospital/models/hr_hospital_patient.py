@@ -58,9 +58,78 @@ class HrHospitalPatient(models.Model):
         help="Patient's age",
     )
 
+    diagnosis_count = fields.Integer(
+        compute = '_compute_diagnosis_count',
+    )
+
+    visit_count = fields.Integer(
+        compute = '_compute_visit_count',
+    )
+
     @api.depends('birthday_date')
     def _compute_age(self):
         for record in self:
             if record.birthday_date:
                 record.age_count = relativedelta(self.env.context['today'],
                                                  record.birthday_date).years
+
+    def show_patient_visits(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Patient visits',
+            'res_model': 'hr.hospital.visit',
+            'view_mode': 'list',
+            'view_type': 'form',
+            'domain': [
+                ["patient_id", "=", self.id],
+            ],
+        }
+
+    def show_history_diagnosis(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'History of diagnosis',
+            'res_model': 'hr.hospital.diagnosis',
+            'target': 'current',
+            'view_mode': 'list',
+            'view_type': 'form',
+            'domain': [
+                ["patient_id", "=", self.id],
+            ],
+            'context' : {'group_by': 'disease_id'},
+        }
+
+    def add_visit(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add visit',
+            'res_model': 'hr.hospital.visit',
+            'target': 'new',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'context': {
+                'default_patient_id': self.id,
+                'quick_create': True,
+            },
+        }
+
+    def _compute_diagnosis_count(self):
+        for patient in self:
+            model_name = 'hr.hospital.diagnosis'
+            patient.diagnosis_count = self.env[model_name].search_count(
+                domain=[
+                    ('patient_id', '=', patient.id),
+                ],
+            )
+
+    def _compute_visit_count(self):
+        for patient in self:
+            model_name = 'hr.hospital.visit'
+            patient.visit_count = self.env[model_name].search_count(
+                domain=[
+                    ('patient_id', '=', patient.id),
+                ],
+            )

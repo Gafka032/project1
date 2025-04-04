@@ -30,7 +30,7 @@
                             <field name="diagnosis_count" widget="statinfo" string="Diagnosis"/>
                         </button>
                         <button type="object" name="show_patient_visits" icon="fa-list-ol">
-                            <field name="patient_visit_count" widget="statinfo" string="Visits"/>
+                            <field name="visit_count" widget="statinfo" string="Visits"/>
                         </button>
                     </div>
                     <field name="photo" widget="image" class="oe_avatar m-0"

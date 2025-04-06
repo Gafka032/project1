@@ -3,7 +3,8 @@
         <field name="name">hr.hospital.disease.tree ()</field>
         <field name="model">hr.hospital.disease</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree default_group_by="type_id">
+                <field name="type_id"/>
                 <field name="name"/>
                 <field name="description"/>
             </tree>
@@ -14,7 +15,7 @@
         <field name="name">hr.hospital.disease.form ()</field>
         <field name="model">hr.hospital.disease</field>
         <field name="arch" type="xml">
-            <form>
+            <form duplicate="0">
                 <header></header>
                 <sheet>
                     <group>
@@ -27,6 +28,18 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="hr_hospital_disease_search" model="ir.ui.view">
+        <field name="name">hr.hospital.disease.form (hr_hospital_disease)</field>
+        <field name="model">hr.hospital.disease</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <searchpanel>
+                    <field name="type_id" select="one" hierarchize="1"/>
+                </searchpanel>
+            </search>
         </field>
     </record>
 

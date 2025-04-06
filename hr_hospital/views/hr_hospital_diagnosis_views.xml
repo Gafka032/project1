@@ -39,13 +39,13 @@
     </record>
 
     <record id="hr_hospital_diagnosis_pivot" model="ir.ui.view">
-        <field name="name">hr.hospital.diagnosis.pivot (hr.hospital.diagnosis)</field>
+        <field name="name">hr.hospital.diagnosis.pivot (hr_hospital_diagnosis)</field>
         <field name="model">hr.hospital.diagnosis</field>
         <field name="priority">50</field>
         <field name="arch" type="xml">
             <pivot string="Pivot Diseases" sample="1" disable_linking="1" display_quantity="1">
                 <field name="create_date" interval="year" type="col"/>
-                <field name="create_date" interval="moth" type="col"/>
+                <field name="create_date" interval="month" type="col"/>
                 <field name="disease_type" type="row"/>
                 <field name="disease_id" type="row"/>
             </pivot>
@@ -53,7 +53,7 @@
     </record>
 
     <record id="hr_hospital_diagnosis_graph" model="ir.ui.view">
-        <field name="name">hr.hospital.diagnosis.graph (hr.hospital.diagnosis)</field>
+        <field name="name">hr.hospital.diagnosis.graph (hr_hospital_diagnosis)</field>
         <field name="model">hr.hospital.diagnosis</field>
         <field name="priority">60</field>
         <field name="arch" type="xml">

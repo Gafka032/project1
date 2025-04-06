@@ -46,3 +46,20 @@ class HrHospitalDoctor(models.Model):
         domain="[('is_intern', '=', False)]",
         help="Intern's mentor",
     )
+
+    mentor_phone = fields.Char(
+        related='mentor_id.telephone',
+        string='Mentor phone',
+    )
+
+    mentor_photo = fields.Image(
+        related='mentor_id.photo',
+        string='Mentor photo',
+    )
+
+    intern_ids = fields.One2many(
+        comodel_name='hr.hospital.doctor',
+        inverse_name='mentor_id',
+        string='Interns',
+        readonly=True,
+    )

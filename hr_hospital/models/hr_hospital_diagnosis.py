@@ -46,6 +46,11 @@ class HrHospitalDiagnosis(models.Model):
         string='Disease',
     )
 
+    disease_type = fields.Many2one(
+        related='disease_id.type_id',
+        store=True,
+    )
+
     appointment_treatment = fields.Text(
         string='Appointment treatment',
         help='Write appointment treatment',

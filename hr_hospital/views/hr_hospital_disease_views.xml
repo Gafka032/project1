@@ -40,5 +40,5 @@
     <menuitem id="hr_hospital_menu_disease"
               action="action_hr_hospital_disease_window"
               parent="hr_hospital_menu_diseases"
-              name="Disease" sequence="20"/>
+              name="Disease" sequence="231"/>
 </odoo>

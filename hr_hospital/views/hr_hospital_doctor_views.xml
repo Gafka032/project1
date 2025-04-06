@@ -129,5 +129,5 @@
     <menuitem id="hr_hospital_menu_doctor"
               action="action_hr_hospital_doctor_window"
               parent="hr_hospital_menu_persons"
-              name="Doctors" sequence="200"/>
+              name="Doctors" sequence="191"/>
 </odoo>

@@ -63,3 +63,16 @@ class HrHospitalDoctor(models.Model):
         string='Interns',
         readonly=True,
     )
+
+    def add_visit(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Quick add visit',
+            'res_model': 'hr.hospital.visit',
+            'target': 'new',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'context': {
+                'quick_create': True,
+            },
+        }

@@ -1,0 +1,7 @@
+id,name,visit_id:id,disease_id:id,doctor_id:id,is_approved
+diagnosis_demo_1,COVID-19,demo_visit_1,hr_hospital.hh_disease_data_5,hr_hospital.hh_doctor_demo_3,True
+diagnosis_demo_2,Flu,demo_visit_1,hr_hospital.hh_disease_data_1,hr_hospital.hh_doctor_demo_3,True
+diagnosis_demo_3,,demo_visit_3,hr_hospital.hh_disease_data_4,hr_hospital.hh_doctor_demo_5,True
+diagnosis_demo_4,,demo_visit_3,hr_hospital.hh_disease_data_5,hr_hospital.hh_doctor_demo_5,True
+diagnosis_demo_5,,demo_visit_4,hr_hospital.hh_disease_data_6,hr_hospital.hh_doctor_demo_4,False
+diagnosis_demo_6,,demo_visit_4,hr_hospital.hh_disease_data_3,hr_hospital.hh_doctor_demo_4,False

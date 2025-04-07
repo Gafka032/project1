@@ -10,7 +10,7 @@
                 <field name="name"/>
                 <field name="doctor_id"/>
                 <field name="res_partner_id"/>
-                <field name="disease_type_id"/>
+                <field name="disease_id"/>
 
             </tree>
         </field>
@@ -49,7 +49,7 @@
                             <field name="telephone"/>
                             <field name="passport_data"/>
                             <field name="description"/>
-                            <field name="disease_type_id"/>
+                            <field name="disease_id"/>
                         </group>
                     </group>
                 </sheet>

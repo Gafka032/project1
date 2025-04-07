@@ -33,10 +33,10 @@ class HrHospitalPatient(models.Model):
         string='Personal doctor'
     )
 
-    disease_type_id = fields.Many2one(
-        comodel_name='hr.hospital.disease.type',
-        string="Disease type",
-        help="Disease type",
+    disease_id = fields.Many2one(
+        comodel_name='hr.hospital.disease',
+        string="Disease",
+        help="Disease",
     )
 
     passport_data = fields.Char(
@@ -68,10 +68,9 @@ class HrHospitalPatient(models.Model):
 
     @api.depends('birthday_date')
     def _compute_age(self):
-        for record in self:
-            if record.birthday_date:
-                record.age_count = relativedelta(self.env.context['today'],
-                                                 record.birthday_date).years
+        date_today = fields.Date.today()
+        for patient in self:
+            patient.age_count = str(relativedelta(date_today, patient.birthday_date).years)
 
     def show_patient_visits(self):
         self.ensure_one()

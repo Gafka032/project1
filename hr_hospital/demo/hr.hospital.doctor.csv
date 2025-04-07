@@ -1,0 +1,7 @@
+id,name:id,gender,telephone,res_partner_id:id,speciality_id:id,description,is_intern,mentor_id
+hh_doctor_demo_1,John Doe,male,+12000000,hr_hospital.hh_partner_demo_d_1,hr_hospital.doc_spec_1,,False,
+hh_doctor_demo_2,Jane Doe,female,+123404830,hr_hospital.hh_partner_demo_d_2,hr_hospital.doc_spec_1,,True,John Doe
+hh_doctor_demo_3,James Smith,male,+10000000,hr_hospital.hh_partner_demo_d_3,hr_hospital.doc_spec_2,,False,
+hh_doctor_demo_4,Gordon Freeman,male,+1012309881,hr_hospital.hh_partner_demo_d_4,hr_hospital.doc_spec_2,,True,James Smith
+hh_doctor_demo_5,Nick Smith,male,+12479817918,hr_hospital.hh_partner_demo_d_5,hr_hospital.doc_spec_3,,False,
+hh_doctor_demo_6,Jaden Smith,female,+18974894,hr_hospital.hh_partner_demo_d_6,hr_hospital.doc_spec_3,,True,Nick Smith

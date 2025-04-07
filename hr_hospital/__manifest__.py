@@ -23,10 +23,12 @@
         'views/hr_hospital_disease_views.xml',
         'views/hr_hospital_disease_type_views.xml',
 
+        'data/hr.hospital.doctor.speciality.csv',
         'data/hr_hospital_disease_data.xml',
     ],
     'demo': [
-        'demo/hr_hospital_doctor_demo.xml',
+        'demo/res_partner_demo.xml',
+        'demo/hr.hospital.doctor.csv',
         'demo/hr.hospital.patient.csv',
     ],
     'installable': True,

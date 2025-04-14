@@ -1,4 +1,5 @@
-import logging, string
+import logging
+import string
 
 from odoo import models, fields
 
@@ -10,7 +11,6 @@ class HrHospitalDoctor(models.Model):
     _name = 'hr.hospital.doctor'
     _inherit = 'hr.hospital.person.mixin'
     _description = 'Doctor'
-
 
     active = fields.Boolean(
         default=True,
@@ -67,8 +67,8 @@ class HrHospitalDoctor(models.Model):
     def _get_report_base_filename(self):
         file_name = string.Template('$name($speciality)')
         return file_name.substitute(
-            name = self.name,
-            speciality = self.speciality_id.name,
+            name=self.name,
+            speciality=self.speciality_id.name,
         )
 
     def add_visit(self):

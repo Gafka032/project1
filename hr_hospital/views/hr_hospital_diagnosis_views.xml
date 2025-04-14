@@ -44,8 +44,9 @@
         <field name="priority">50</field>
         <field name="arch" type="xml">
             <pivot string="Pivot Diseases" sample="1" disable_linking="1" display_quantity="1">
-                <field name="create_date" interval="year" type="col"/>
-                <field name="create_date" interval="month" type="col"/>
+                <field name="create_date" interval="year" type="col">
+                    <field name="create_date" interval="month" type="col"/>
+                </field>
                 <field name="disease_type" type="row"/>
                 <field name="disease_id" type="row"/>
             </pivot>

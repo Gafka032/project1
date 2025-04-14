@@ -11,7 +11,6 @@ class HrHospitalPatient(models.Model):
     _inherit = 'hr.hospital.person.mixin'
     _description = 'Patient'
 
-
     active = fields.Boolean(
         default=True,
         groups='base.group_system',
@@ -59,18 +58,19 @@ class HrHospitalPatient(models.Model):
     )
 
     diagnosis_count = fields.Integer(
-        compute = '_compute_diagnosis_count',
+        compute='_compute_diagnosis_count',
     )
 
     visit_count = fields.Integer(
-        compute = '_compute_visit_count',
+        compute='_compute_visit_count',
     )
 
     @api.depends('birthday_date')
     def _compute_age(self):
         date_today = fields.Date.today()
         for patient in self:
-            patient.age_count = str(relativedelta(date_today, patient.birthday_date).years)
+            patient.age_count = str(relativedelta(date_today,
+                                                  patient.birthday_date).years)
 
     def show_patient_visits(self):
         self.ensure_one()
@@ -97,7 +97,7 @@ class HrHospitalPatient(models.Model):
             'domain': [
                 ["patient_id", "=", self.id],
             ],
-            'context' : {'group_by': 'disease_id'},
+            'context': {'group_by': 'disease_id'},
         }
 
     def add_visit(self):

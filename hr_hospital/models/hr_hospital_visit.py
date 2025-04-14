@@ -1,8 +1,11 @@
-from odoo import models, fields, api, exceptions
+import logging
+
+from odoo import models, fields, api, exceptions, _
+
+_logger = logging.getLogger(__name__)
 
 
 class HrHospitalVisit(models.Model):
-
     _name = 'hr.hospital.visit'
 
     _description = 'Visit'
@@ -77,8 +80,8 @@ class HrHospitalVisit(models.Model):
         )
         if result_count != 0:
             raise exceptions.UserError(
-                ("One patient cannot have two visits "
-                                        "at the same day."))
+                _("One patient cannot have two visits "
+                  "at the same day."))
 
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
@@ -87,14 +90,14 @@ class HrHospitalVisit(models.Model):
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
         if self.state == 'completed' and start_date < today_date:
             raise exceptions.ValidationError(
-                ("It is not possible to change "
-                                              "the visit date after the visit "
-                                              "is completed."))
+                _("It is not possible to change "
+                  "the visit date after the visit "
+                  " is completed."))
 
     @api.constrains('active')
     def _constrains_active(self):
         self.ensure_one()
         if not self.active and self.diagnosis_id:
             raise exceptions.UserError(
-                ("You cannot archive visit with "
-                                        "diagnosis."))
+                _("You cannot archive visit with "
+                  "diagnosis."))

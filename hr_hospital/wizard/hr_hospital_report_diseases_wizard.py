@@ -43,7 +43,7 @@ class HrHospitalReportDiseases(models.TransientModel):
         return res
 
     def generate_report(self):
-        domain=[
+        domain = [
             ("create_date", ">", self.from_date),
             ("create_date", "<", self.till_date),
         ]

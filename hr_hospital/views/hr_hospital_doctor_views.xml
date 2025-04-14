@@ -26,7 +26,8 @@
                 </header>
                 <sheet>
                     <field name="photo" widget="image" class="oe_avatar"/>
-                    <field name="active"/>
+                    <field name="active" invisible="true"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
                     <group>
                         <group>
                             <field name="name"/>

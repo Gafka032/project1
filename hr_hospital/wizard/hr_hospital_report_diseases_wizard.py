@@ -43,29 +43,24 @@ class HrHospitalReportDiseases(models.TransientModel):
         return res
 
     def generate_report(self):
-        doctor_ids = self.doctor_ids.ids
-        disease_ids = self.disease_ids.ids
+        domain=[
+            ("create_date", ">", self.from_date),
+            ("create_date", "<", self.till_date),
+        ]
 
-        if len(doctor_ids) == 0:
-            active_model = self.env.context.get('active_model')
-            res_doctor = self.env[active_model].search([])
-            doctor_ids = res_doctor.ids
+        if self.doctor_ids:
+            domain.append(("doctor_id", "in", self.doctor_ids.ids))
 
-        if len(disease_ids) == 0:
-            disease_ids = self.env['hr.hospital.disease'].search([]).ids
+        if self.disease_ids:
+            domain.append(("disease_id", "in", self.disease_ids.ids))
 
         return {
             'type': 'ir.actions.act_window',
             'name': 'List diseases',
             'res_model': 'hr.hospital.diagnosis',
-            'target': 'new',
+            'target': 'inline',
             'view_mode': 'list',
             'view_type': 'form',
-            'domain': [
-                ["doctor_id", "in", doctor_ids],
-                ["patient_id", "in", disease_ids],
-                ["create_date", ">", self.from_date],
-                ["create_date", "<", self.till_date]
-            ],
+            'domain': domain,
             'context': {'group_by': 'disease_id'},
         }

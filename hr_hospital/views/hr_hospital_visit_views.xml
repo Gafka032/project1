@@ -63,7 +63,7 @@
         <field name="name">hr.hospital.visit.calendar (hr_hospital_visit)</field>
         <field name="model">hr.hospital.visit</field>
         <field name="arch" type="xml">
-            <calendar string="Patient visits" date_start="scheduled_visit_date" mode="month" color="doctor_id">
+            <calendar string="Patient visits" date_start="scheduled_visit_date" mode="month" color="doctor_id" create="false" delete="false">
                 <field name="doctor_id" avatar_field="avatar_128"/>
                 <field name="patient_id" avatar_field="avatar_128"/>
             </calendar>

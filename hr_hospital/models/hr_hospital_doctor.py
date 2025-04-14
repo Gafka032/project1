@@ -1,4 +1,4 @@
-import logging
+import logging, string
 
 from odoo import models, fields
 
@@ -63,6 +63,13 @@ class HrHospitalDoctor(models.Model):
         string='Interns',
         readonly=True,
     )
+
+    def _get_report_base_filename(self):
+        file_name = string.Template('$name($speciality)')
+        return file_name.substitute(
+            name = self.name,
+            speciality = self.speciality_id.name,
+        )
 
     def add_visit(self):
         return {

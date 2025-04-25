@@ -61,8 +61,8 @@ class HrHospitalVisit(models.Model):
     def _ondelete(self):
         self.ensure_one()
         if self.diagnosis_id:
-            raise exceptions.UserError_("You cannot delete visit with "
-                                        "diagnosis.")
+            raise exceptions.UserError(_("You cannot delete visit with "
+                                        "diagnosis."))
 
     @api.constrains('scheduled_visit_date', 'doctor_id', 'patient_id')
     def _constrains_scheduled_visit_date_doctor_patient(self):

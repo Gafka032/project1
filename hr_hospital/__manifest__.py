@@ -9,6 +9,8 @@
         'base',
     ],
     'data': [
+        'security/hr_hospital_security_groups.xml',
+        'security/hr_hospital_security_rules.xml',
         'security/ir.model.access.csv',
 
         'wizard/hr_hospital_personal_doctor_wizard_views.xml',

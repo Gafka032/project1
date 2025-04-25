@@ -46,7 +46,7 @@
         <field name="implied_ids"
                eval="[(4, ref('group_hr_hospital_manager'))]"/>
         <field name="users"
-               eval="[Command.link(ref('base.user_root)), Command.link(ref('base.user.admin'))]"/>
+               eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
         <field name="comment">Administrators have full access to all module
             data.
         </field>

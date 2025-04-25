@@ -4,7 +4,7 @@
     <record id="hr_hospital_visit_rule_patient" model="ir.rule">
         <field name="name">Patient: only sees his own visits.</field>
         <field name="model_id" ref="model_hr_hospital_visit"/>
-        <field name="domain_force">[('patient_id.user_id', '=' user.id)]
+        <field name="domain_force">[('patient_id', '=', user.id)]
         </field>
         <field name="groups" eval="[(4, ref('group_hr_hospital_patient'))]"/>
         <field name="perm_read" eval="True"/>
@@ -16,7 +16,7 @@
     <record id="hr_hospital_visit_rule_intern" model="ir.rule">
         <field name="name">Intern: can edit their visits.</field>
         <field name="model_id" ref="model_hr_hospital_visit"/>
-        <field name="domain_force">[('doctor_id.user_id', '=' user.id)]</field>
+        <field name="domain_force">[('doctor_id', '=', user.id)]</field>
         <field name="groups" eval="[(4, ref('group_hr_hospital_intern'))]"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_write" eval="True"/>
@@ -28,8 +28,8 @@
         <field name="name">Doctor: sees his/her visits and those of interns.
         </field>
         <field name="model_id" ref="model_hr_hospital_visit"/>
-        <field name="domain_force">['|', ('doctor_id.user_id', '=' user.id),
-            ('doctor_id.mentor_id.user.id', '=', user.id)]
+        <field name="domain_force">['|', ('doctor_id', '=', user.id),
+            ('doctor_id.mentor_id', '=', user.id)]
         </field>
         <field name="groups" eval="[(4, ref('group_hr_hospital_doctor'))]"/>
         <field name="perm_read" eval="True"/>

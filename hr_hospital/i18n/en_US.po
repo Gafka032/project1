@@ -1,0 +1,852 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_hospital
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-25 13:30+0000\n"
+"PO-Revision-Date: 2025-04-25 13:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_hospital
+#: model:ir.actions.report,print_report_name:hr_hospital.hr_hospital_doctor_main_report
+msgid ""
+"(object._get_report_base_filename())\n"
+"        "
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "<strong>Doctor:</strong>"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "<strong>Interns:</strong>"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__active
+msgid "Active"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_personal_doctor_wizard_form
+msgid "Add doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+msgid "Add visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hr_hospital_admin
+msgid "Administrator"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hr_hospital_admin
+msgid ""
+"Administrators have full access to all module data.\n"
+"        "
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__age_count
+msgid "Age"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.doctor.speciality,description:hr_hospital.doc_spec_1
+msgid ""
+"Allergy and immunology is a subspecialty of internal medicine. An allergist-"
+"immunologist evaluates, diagnoses, and manages disorders involving the "
+"immune system. Such conditions include asthma, anaphylaxis, eczema, "
+"rhinitis, and reactions to drugs, foods, and insect stings."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__appointment_treatment
+msgid "Appointment treatment"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__is_approved
+msgid "Approved by mentor doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+msgid "Archived"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_personal_doctor_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_report_diseases_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__canceled
+msgid "Cancelled"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_personal_doctor_wizard_action
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_tree
+msgid "Change personal doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__child_id
+msgid "Child types"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__complete_name
+msgid "Complete Name of disease type"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__completed
+msgid "Completed"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_res_partner
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__res_partner_id
+msgid "Contact"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__res_partner_id
+msgid "Contact person"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_5
+msgid ""
+"Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-"
+"CoV-2 virus."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__from_date
+msgid "Date from"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__birthday_date
+msgid "Date of birth"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Date of birthday"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__till_date
+msgid "Date till"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__description
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__description
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__description
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__description
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__description
+msgid "Description"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_diagnosis_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_diagnosis
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__diagnosis_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_diagnosis
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+msgid "Diagnosis"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__diagnosis_count
+msgid "Diagnosis Count"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_disease_window
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__disease_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__disease_id
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_patient__disease_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_disease
+msgid "Disease"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_disease_type
+msgid "Disease Types"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_disease_type
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__disease_type
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__type_id
+msgid "Disease type"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_disease_type_window
+msgid "Disease types"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__disease_ids
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_diseases
+msgid "Diseases"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_report_diseases_wizard
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_tree
+msgid "Diseases report"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_graph
+msgid "Diseases statistic"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_doctor_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_doctor
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__doctor_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__doctor_id
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_diagnosis__doctor_id
+#: model:res.groups,name:hr_hospital.group_hr_hospital_doctor
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.report,name:hr_hospital.hr_hospital_doctor_main_report
+msgid "Doctor report"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_doctor_speciality_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_doctor_speciality
+msgid "Doctor speciality"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_doctor__speciality_id
+msgid "Doctor's speciality"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__doctor_ids
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_doctor
+msgid "Doctors"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hr_hospital_doctor
+msgid ""
+"Doctors can view and edit their own visits and\n"
+"            those of their interns.\n"
+"        "
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_speciality
+msgid "Doctors specialities"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Edit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__female
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__female
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_disease_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Filters"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_1
+msgid "Flu can cause mild to severe illness, and at times can lead to death"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_search
+msgid "Full name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_3
+msgid "Gastritis is the inflammation of the lining of the stomach"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__gender
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__gender
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__gender
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Gender"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_report_diseases_wizard_form
+msgid "Generate a report"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Group by"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_6
+msgid ""
+"Hepatitis A is a contagious liver disease caused by the hepatitis A virus "
+"(HAV)."
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.visit,description:hr_hospital.demo_visit_1
+msgid "High fever, feeling unwell, breathing problems"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.visit,description:hr_hospital.demo_visit_4
+msgid "High temperature, headache, muscle pains"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.module.category,name:hr_hospital.category_hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_main_menu
+msgid "Hospital"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_res_partner__hr_hospital_doctor_ids
+#: model:ir.model.fields,field_description:hr_hospital.field_res_users__hr_hospital_doctor_ids
+msgid "Hospital Doctors"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_res_partner__hr_hospital_patient_ids
+#: model:ir.model.fields,field_description:hr_hospital.field_res_users__hr_hospital_patient_ids
+msgid "Hospital Patients"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.doctor.speciality,description:hr_hospital.doc_spec_3
+msgid ""
+"Hospital medicine is a subspecialty, usually of internal medicine. A doctor "
+"of hospital medicine—a hospitalist—works exclusively in a hospital and "
+"provides general medical care to hospitalized patients."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hr_hospital_intern
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Intern"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_doctor__mentor_id
+msgid "Intern's mentor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.doctor.speciality,description:hr_hospital.doc_spec_2
+msgid ""
+"Internal medicine is a broad and versatile discipline that often serves as a"
+" preliminary specialty before physicians enter a wide range of other medical"
+" specialties or subspecialties."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__intern_ids
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+msgid "Interns"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hr_hospital_intern
+msgid "Interns can view and edit their visits."
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+msgid "Inters"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__is_intern
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__is_intern
+msgid "Is Intern"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_diagnosis__is_intern
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_doctor__is_intern
+msgid "Is doctor an intern?"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid ""
+"It is not possible to change the visit date after the visit  is completed."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_report_diseases_wizard__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__male
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__male
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hr_hospital_manager
+msgid "Manager"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hr_hospital_manager
+msgid "Managers can view all visits."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_personal_doctor_wizard
+msgid "Mass redefinition of the personal doctor for patients"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_2
+msgid ""
+"Medical condition in which superficial veins become enlarged and twisted"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__mentor_id
+msgid "Mentor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__mentor_phone
+msgid "Mentor phone"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__mentor_photo
+msgid "Mentor photo"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+msgid "Mentors"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+msgid "Mentors information"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__name
+msgid "Name of disease type"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor_speciality__name
+msgid "Name of speciality"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__name
+msgid "Name, Surname"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Number"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid "One patient cannot have two visits at the same day."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__other
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__other
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__other
+msgid "Other"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease_type__parent_id
+msgid "Parent type"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__passport_data
+msgid "Passport data"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_patient_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_patient
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__patient_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__patient_id
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_diagnosis__patient_id
+#: model:res.groups,name:hr_hospital.group_hr_hospital_patient
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Patient"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Patient full name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__visit_id
+msgid "Patient visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_visit_window
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_calendar
+msgid "Patient visits"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Patient visits:"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_patient__age_count
+msgid "Patient's age"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_patient__birthday_date
+msgid "Patient's birthday"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_patient__passport_data
+msgid "Patient's passport data"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_patient
+msgid "Patients"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Patients:"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.visit,description:hr_hospital.demo_visit_2
+#: model:hr.hospital.visit,description:hr_hospital.demo_visit_3
+msgid "Periodic episodes of extreme pain, swelling of hands and feet"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_person_mixin
+msgid "Person"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__doctor_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_personal_doctor_wizard__doctor_id
+msgid "Personal doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_persons
+msgid "Persons"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_search
+msgid "Phone"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__telephone
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__telephone
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__telephone
+msgid "Phone number"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__photo
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__photo
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__photo
+msgid "Photo of person"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_pivot
+msgid "Pivot Diseases"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr-hospital_visit_pivot
+msgid "Pivot Example"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_diseases_wizard_action
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_report_diseases_wizard_action
+msgid "Report on diseases"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__scheduled
+msgid "Scheduled"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_main_settings
+msgid "Settings"
+msgstr ""
+
+#. module: hr_hospital
+#: model:hr.hospital.disease,description:hr_hospital.hh_disease_data_4
+msgid ""
+"Sickle cell disease affects the shape of red blood cells and their ability "
+"to carry oxygen."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__speciality_id
+msgid "Speciality"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__state
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "State"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__visit_date
+msgid "The actual visit date and time"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__scheduled_visit_date
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_visit__scheduled_visit_date
+msgid "The planned visit date and time"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_personal_doctor_wizard_form
+msgid ""
+"This wizard add possibility mass redefinition of the personal doctor for "
+"patients."
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_report_diseases_wizard_form
+msgid "This wizard to form a report on diseases for a certain period."
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_disease
+msgid "Types of diseases (diseases)"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.module.category,description:hr_hospital.category_hr_hospital
+msgid "User access levels for the Hospital"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hr_hospital_patient
+msgid ""
+"Users with patient rights can only view their own\n"
+"            data.\n"
+"        "
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_visit
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_diagnosis__visit_id
+msgid "Visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__visit_count
+msgid "Visit Count"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_main_template
+msgid "Visit date"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_visit__description
+msgid "Visit description"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_visit__state
+msgid "Visit state"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_visit
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+msgid "Visits"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,help:hr_hospital.field_hr_hospital_diagnosis__appointment_treatment
+msgid "Write appointment treatment"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid "You cannot archive visit with diagnosis."
+msgstr ""

@@ -9,8 +9,7 @@
     <record id="group_hr_hospital_patient" model="res.groups">
         <field name="name">Patient</field>
         <field name="category_id" ref="category_hr_hospital"/>
-        <field name="comment">Users with patient rights can only view their own
-            data.
+        <field name="comment">Users with patient rights can only view their own data.
         </field>
     </record>
 
@@ -27,8 +26,7 @@
         <field name="category_id" ref="category_hr_hospital"/>
         <field name="implied_ids"
                eval="[(4, ref('group_hr_hospital_intern'))]"/>
-        <field name="comment">Doctors can view and edit their own visits and
-            those of their interns.
+        <field name="comment">Doctors can view and edit their own visits and those of their interns.
         </field>
     </record>
 
@@ -47,8 +45,7 @@
                eval="[(4, ref('group_hr_hospital_manager'))]"/>
         <field name="users"
                eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
-        <field name="comment">Administrators have full access to all module
-            data.
+        <field name="comment">Administrators have full access to all module data.
         </field>
     </record>
 </odoo>

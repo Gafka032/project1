@@ -6,6 +6,12 @@ _logger = logging.getLogger(__name__)
 
 
 class HrHospitalDiagnosis(models.Model):
+    """Model representing a medical diagnosis in the hospital system.
+    
+    This model stores information about diagnoses made during patient visits,
+    including the associated disease, doctor, patient, and treatment plan.
+    It also handles approval workflows for diagnoses made by intern doctors.
+    """
     _name = 'hr.hospital.diagnosis'
     _description = 'Diagnosis'
 
@@ -62,6 +68,18 @@ class HrHospitalDiagnosis(models.Model):
 
     @api.model
     def create(self, vals_list):
+        """Create new diagnosis records with automatic approval for non-intern doctors.
+        
+        This method extends the standard create method to automatically approve
+        diagnoses created by doctors who are not interns. Diagnoses created by
+        intern doctors will need explicit approval from their mentors.
+        
+        Args:
+            vals_list: Values for creating the new diagnosis records
+            
+        Returns:
+            The newly created diagnosis records
+        """
         records = super(HrHospitalDiagnosis, self).create(vals_list)
         for record in records:
             if not record.is_intern:

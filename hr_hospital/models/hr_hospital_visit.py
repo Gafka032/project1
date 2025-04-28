@@ -6,6 +6,12 @@ _logger = logging.getLogger(__name__)
 
 
 class HrHospitalVisit(models.Model):
+    """Model representing a hospital visit.
+    
+    This model stores information about patient visits to the hospital,
+    including scheduled and actual visit dates, the assigned doctor,
+    and related diagnoses.
+    """
     _name = 'hr.hospital.visit'
 
     _description = 'Visit'
@@ -59,6 +65,11 @@ class HrHospitalVisit(models.Model):
 
     @api.ondelete(at_uninstall=False)
     def _ondelete(self):
+        """Prevent deletion of visits that have associated diagnoses.
+        
+        Raises:
+            UserError: If the visit has associated diagnoses.
+        """
         self.ensure_one()
         if self.diagnosis_id:
             raise exceptions.UserError(_("You cannot delete visit with "
@@ -66,6 +77,14 @@ class HrHospitalVisit(models.Model):
 
     @api.constrains('scheduled_visit_date', 'doctor_id', 'patient_id')
     def _constrains_scheduled_visit_date_doctor_patient(self):
+        """Ensure a patient cannot have multiple visits on the same day.
+        
+        This constraint checks if there are any other visits for the same patient
+        with the same doctor on the same day as the scheduled visit date.
+        
+        Raises:
+            UserError: If another visit for the same patient exists on the same day.
+        """
         self.ensure_one()
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
         end_date = self.scheduled_visit_date.strftime("%Y-%m-%d 23:59:59")
@@ -85,6 +104,15 @@ class HrHospitalVisit(models.Model):
 
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
+        """Prevent changing visit date for completed visits in the past.
+        
+        This constraint ensures that the visit date cannot be changed
+        for visits that are marked as completed and scheduled in the past.
+        
+        Raises:
+            ValidationError: If attempting to change the date of a completed visit
+                            that was scheduled in the past.
+        """
         self.ensure_one()
         today_date = fields.Datetime.today().strftime("%Y-%m-%d")
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
@@ -96,6 +124,14 @@ class HrHospitalVisit(models.Model):
 
     @api.constrains('active')
     def _constrains_active(self):
+        """Prevent archiving visits that have associated diagnoses.
+        
+        This constraint ensures that visits with diagnoses cannot be archived,
+        maintaining data integrity and preventing orphaned diagnosis records.
+        
+        Raises:
+            UserError: If attempting to archive a visit with associated diagnoses.
+        """
         self.ensure_one()
         if not self.active and self.diagnosis_id:
             raise exceptions.UserError(

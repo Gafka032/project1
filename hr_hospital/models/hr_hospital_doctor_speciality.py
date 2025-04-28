@@ -6,6 +6,12 @@ _logger = logging.getLogger(__name__)
 
 
 class HrHospitalDoctorSpeciality(models.Model):
+    """Model representing medical specialities for doctors.
+    
+    This model stores information about different medical specialities
+    that doctors can have, such as cardiology, neurology, pediatrics, etc.
+    Each doctor in the system can be assigned to a speciality.
+    """
     _name = 'hr.hospital.doctor.speciality'
     _description = 'Doctor speciality'
 

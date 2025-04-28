@@ -7,6 +7,12 @@ _logger = logging.getLogger(__name__)
 
 
 class HrHospitalDoctor(models.Model):
+    """Model representing a hospital doctor.
+    
+    This model stores information about doctors in the hospital system,
+    including their personal details, specialities, and relationships
+    with interns and mentors.
+    """
 
     _name = 'hr.hospital.doctor'
     _inherit = 'hr.hospital.person.mixin'
@@ -65,6 +71,11 @@ class HrHospitalDoctor(models.Model):
     )
 
     def _get_report_base_filename(self):
+        """Generate a base filename for reports related to this doctor.
+        
+        Returns:
+            str: A filename string containing the doctor's name and speciality.
+        """
         file_name = string.Template('$name($speciality)')
         return file_name.substitute(
             name=self.name,
@@ -72,6 +83,11 @@ class HrHospitalDoctor(models.Model):
         )
 
     def add_visit(self):
+        """Open a form to quickly add a new visit.
+        
+        Returns:
+            dict: Action dictionary to open a new visit form in quick create mode.
+        """
         return {
             'type': 'ir.actions.act_window',
             'name': 'Quick add visit',

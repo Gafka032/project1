@@ -1,4 +1,4 @@
-"id",name,description,birthday_date,gender,telephone,doctor_id:id,disease_type_id:id
-hh_patient_1,Ashley Wililiams,,,,,hr_hospital.hh_doctor_demo_1,hh_disease_type_data_3
-hh_patient_2,John Price,,,,,hr_hospital.hh_doctor_demo_2,hh_disease_type_data_1
-hh_patient_3,James Ghost,,,,,hr_hospital.hh_doctor_demo_3,hh_disease_type_data_2
+"id",name,birthday_date,gender,res_partner_id:id,telephone,passport_data,description,disease_id:id,doctor_id:id
+hh_patient_1,Ashley Williams,2001-10-15,female,hr_hospital.hh_partner_demo_p_1,+174289374,AK182734,,hr_hospital.hh_disease_data_5,hr_hospital.hh_doctor_demo_3
+hh_patient_2,John Price,1986-11-25,male,hr_hospital.hh_partner_demo_p_2,+154632574,FT73343445,,hr_hospital.hh_disease_data_4,hr_hospital.hh_doctor_demo_5
+hh_patient_3,James Ghost,1995-07-11,male,hr_hospital.hh_partner_demo_p_3,+173546873,AZ1834846,,hr_hospital.hh_disease_data_6,hr_hospital.hh_doctor_demo_4

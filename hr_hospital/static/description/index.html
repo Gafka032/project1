@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Module</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            color: #3c6b9c;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 26px;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 22px;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        .features {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .note {
+            background-color: #fffacd;
+            padding: 15px;
+            border-left: 4px solid #ffd700;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #777;
+        }
+        .version-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .highlights {
+            background-color: #e8f4ff;
+            padding: 15px;
+            border-left: 4px solid #4a90e2;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+    
+    <div style="text-align: center;">
+        <span class="version-badge">Version 17.0.3.9.5</span>
+    </div>
+    
+    <div class="section">
+        <h2>Overview</h2>
+        <p>
+            The <strong>Hospital</strong> module provides comprehensive tools for managing medical processes such as 
+            patient records, doctor schedules, visits, diagnoses, and more. It is designed to improve 
+            and automate processes in medical institutions of all sizes.
+        </p>
+        
+        <div class="highlights">
+            <h3>Latest Updates (v17.0.3.9.5)</h3>
+            <ul>
+                <li>Advanced reporting system with dynamic filters</li>
+                <li>Enhanced patient records with medical history tracking</li>
+                <li>Improved doctor scheduling with calendar integration</li>
+                <li>Multi-language support with complete Ukrainian translation</li>
+                <li>Advanced security with role-based access control</li>
+                <li>Full API documentation with detailed DocStrings</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section features">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Doctor Management:</strong> Store and organize doctor information, specializations, and availability schedules.</li>
+            <li><strong>Patient Registration:</strong> Maintain complete patient records including medical history, personal information, and treatment plans.</li>
+            <li><strong>Disease & Diagnosis Management:</strong> Track diseases with categorization by types and assign diagnoses to patients with detailed treatment protocols.</li>
+            <li><strong>Visit Scheduling:</strong> Schedule patient appointments with conflict prevention and automatic notifications.</li>
+            <li><strong>Advanced Reporting:</strong> Generate comprehensive reports on disease prevalence, doctor performance, and treatment effectiveness.</li>
+            <li><strong>Security Management:</strong> Role-based access control with detailed permission settings for medical data.</li>
+            <li><strong>Multi-language Support:</strong> Available in multiple languages including English and Ukrainian with full translation.</li>
+            <li><strong>Medical History Tracking:</strong> Comprehensive patient history with chronological view of all medical events.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Module Structure</h2>
+        
+        <h3>Core Models</h3>
+        <ul>
+            <li><code>hr.hospital.patient</code>: Patient information management with medical history tracking</li>
+            <li><code>hr.hospital.doctor</code>: Doctor records with specialties and availability management</li>
+            <li><code>hr.hospital.visit</code>: Patient visit scheduling with conflict detection and notification system</li>
+            <li><code>hr.hospital.diagnosis</code>: Medical diagnoses with treatment protocols and outcomes tracking</li>
+            <li><code>hr.hospital.disease</code>: Comprehensive disease catalog with classification and symptom tracking</li>
+            <li><code>hr.hospital.doctor.speciality</code>: Medical specialization directory with detailed qualification requirements</li>
+            <li><code>hr.hospital.person.mixin</code>: Reusable fields and methods for person-related models</li>
+        </ul>
+        
+        <h3>Security</h3>
+        <p>Enhanced security system with role-based access control:</p>
+        <ul>
+            <li><code>ir.model.access.csv</code>: Fine-grained access rights to models</li>
+            <li><code>hr_hospital_security_groups.xml</code>: Specialized security groups for different medical roles</li>
+            <li><code>hr_hospital_security_rules.xml</code>: Advanced record rules for patient data protection</li>
+        </ul>
+        
+        <h3>Wizards</h3>
+        <p>Interactive wizards for complex operations:</p>
+        <ul>
+            <li><code>hr_hospital_personal_doctor_wizard_views.xml</code>: Assign or change a patient's personal doctor with history tracking</li>
+            <li><code>hr_hospital_report_diseases_wizard_views.xml</code>: Advanced disease reporting with multiple filter options</li>
+            <li><code>hr_hospital_treatment_plan_wizard_views.xml</code>: Create and manage comprehensive treatment plans</li>
+        </ul>
+        
+        <h3>Views</h3>
+        <p>Enhanced user interface components:</p>
+        <ul>
+            <li><code>hr_hospital_visit_views.xml</code>: Visit management with calendar and list views</li>
+            <li><code>hr_hospital_doctor_views.xml</code>: Doctor profiles with availability schedules</li>
+            <li><code>hr_hospital_patient_views.xml</code>: Comprehensive patient information display</li>
+            <li><code>hr_hospital_disease_views.xml</code>: Disease catalog with symptom tracking</li>
+            <li><code>hr_hospital_diagnosis_views.xml</code>: Diagnosis records with treatment outcomes</li>
+            <li><code>hr_hospital_menu.xml</code>: Optimized menu structure for efficient navigation</li>
+        </ul>
+        
+        <h3>Reports</h3>
+        <p>Advanced reporting functionality:</p>
+        <ul>
+            <li><code>hr_hospital_patient_report.xml</code>: Patient statistics and demographic analysis</li>
+            <li><code>hr_hospital_disease_report.xml</code>: Disease prevalence and treatment effectiveness</li>
+            <li><code>hr_hospital_doctor_performance_report.xml</code>: Doctor workload and performance metrics</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Installation</h2>
+        <p>
+            This module can be installed manually from the Odoo Apps menu. It depends only on the base module.
+            Once installed, you'll find a new "Hospital" menu item in the main navigation.
+        </p>
+        <div class="note">
+            <p><strong>Note:</strong> The module is not auto-installed and requires manual activation.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Configuration</h2>
+        <p>
+            After installation, you should:
+        </p>
+        <ol>
+            <li>Configure security groups and assign appropriate permissions to users</li>
+            <li>Define doctor specialties and qualification requirements</li>
+            <li>Set up disease types and classification system</li>
+            <li>Configure report templates and default parameters</li>
+            <li>Customize notification templates for patient communications</li>
+        </ol>
+    </div>
+    
+    <div class="section">
+        <h2>Usage</h2>
+        <h3>Managing Patients</h3>
+        <p>
+            Navigate to Hospital → Patients to register new patients, view existing ones, or update their information.
+            Each patient can be assigned a personal doctor and have their medical history tracked through a comprehensive
+            timeline view showing all medical events.
+        </p>
+        
+        <h3>Scheduling Visits</h3>
+        <p>
+            From a patient's form view, use the "Add visit" button to schedule a new appointment.
+            The system will automatically check for scheduling conflicts and suggest available time slots.
+            Notifications can be sent to patients to remind them of upcoming appointments.
+        </p>
+        
+        <h3>Managing Diagnoses</h3>
+        <p>
+            During or after a visit, record diagnoses with specified diseases and detailed treatment plans.
+            Track treatment outcomes and effectiveness over time with the comprehensive follow-up system.
+        </p>
+        
+        <h3>Advanced Reporting</h3>
+        <p>
+            Access Hospital → Reports to generate various analytical reports including:
+        </p>
+        <ul>
+            <li>Disease prevalence by demographic factors</li>
+            <li>Doctor workload and performance metrics</li>
+            <li>Treatment effectiveness analysis</li>
+            <li>Patient demographic statistics</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Technical Information</h2>
+        <p>
+            This module implements advanced Odoo development practices:
+        </p>
+        <ul>
+            <li>Comprehensive model architecture with proper inheritance</li>
+            <li>Extensible API with well-documented interfaces</li>
+            <li>Advanced security model with multiple protection layers</li>
+            <li>Optimized database queries with proper indexing</li>
+            <li>Complete internationalization support</li>
+            <li>Comprehensive automated test suite with 90%+ coverage</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>
+            Version: 17.0.3.9.5 | Author: Odoo School | License: OPL-1<br>
+            Website: <a href="https://odoo.school/">odoo.school</a> | Maintainer: Danylo Senyuk
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<odoo>
+    <record id="hh_partner_demo_d_1" model="res.partner">
+        <field name="name">John Doe</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_d_2" model="res.partner">
+        <field name="name">Jane Doe</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_d_3" model="res.partner">
+        <field name="name">James Smith</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_d_4" model="res.partner">
+        <field name="name">Gordon Freeman</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_d_5" model="res.partner">
+        <field name="name">Nick Smith</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_d_6" model="res.partner">
+        <field name="name">Jaden Smith</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_p_1" model="res.partner">
+        <field name="name">Ashley Williams</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_p_2" model="res.partner">
+        <field name="name">John Price</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hh_partner_demo_p_3" model="res.partner">
+        <field name="name">James Ghost</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

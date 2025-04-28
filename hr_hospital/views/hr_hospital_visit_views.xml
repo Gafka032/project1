@@ -1,15 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
     <record id="hr_hospital_visit_tree" model="ir.ui.view">
         <field name="name">hr.hospital.visit.tree ()</field>
         <field name="model">hr.hospital.visit</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="state"/>
                 <field name="scheduled_visit_date"/>
                 <field name="visit_date"/>
                 <field name="doctor_id"/>
                 <field name="patient_id"/>
                 <field name="description"/>
-
             </tree>
         </field>
     </record>
@@ -19,7 +21,9 @@
         <field name="model">hr.hospital.visit</field>
         <field name="arch" type="xml">
             <form>
-                <header></header>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="scheduled_visit_date"/>
@@ -38,11 +42,52 @@
         </field>
     </record>
 
-     <record id="action_hr_hospital_visit_window" model="ir.actions.act_window">
+    <record id="hr_hospital_visit_search" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.search (hr_hospital_visit)</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <group string="Group by">
+                    <filter string="State" name="state" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Doctor" name="doctor_id" domain="[]" context="{'group_by': 'doctor_id'}"/>
+                    <filter string="Patient" name="patient_id" domain="[]" context="{'group_by': 'patient_id'}"/>
+                </group>
+                <searchpanel>
+                    <field name="state" select="multi" expand="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_hospital_visit_calendar" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.calendar (hr_hospital_visit)</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="arch" type="xml">
+            <calendar string="Patient visits" date_start="scheduled_visit_date" mode="month" color="doctor_id" create="false" delete="false">
+                <field name="doctor_id" avatar_field="avatar_128"/>
+                <field name="patient_id" avatar_field="avatar_128"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="hr-hospital_visit_pivot" model="ir.ui.view">
+        <field name="name">hr.hospital.visit.pivot (hr_hospital_visit)</field>
+        <field name="model">hr.hospital.visit</field>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <pivot string="Pivot Example" sample="1" disable_linking="1" display_quantity="1">
+                <field name="create_date" interval="month" type="col"/>
+                <field name="state" type="col"/>
+                <field name="doctor_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_hr_hospital_visit_window" model="ir.actions.act_window">
         <field name="name">Patient visits</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.visit</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar,pivot</field>
     </record>
 
 </odoo>

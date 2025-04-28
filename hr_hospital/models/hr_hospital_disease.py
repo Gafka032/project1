@@ -6,6 +6,11 @@ _logger = logging.getLogger(__name__)
 
 
 class HrHospitalDisease(models.Model):
+    """Model representing diseases in the hospital system.
+    
+    This model stores information about different diseases that can be diagnosed,
+    including their names, descriptions, and categorization by disease type.
+    """
     _name = 'hr.hospital.disease'
     _description = 'Types of diseases (diseases)'
 

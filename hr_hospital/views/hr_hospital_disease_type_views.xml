@@ -34,6 +34,6 @@
     <menuitem id="hr_hospital_menu_disease_type"
               action="action_hr_hospital_disease_type_window"
               parent="hr_hospital_menu_diseases"
-              name="Disease Types" sequence="20"/>
+              name="Disease Types" sequence="232"/>
 
 </odoo>

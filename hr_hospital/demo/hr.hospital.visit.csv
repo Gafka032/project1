@@ -1,0 +1,5 @@
+id,description,state,scheduled_visit_date,visit_date,doctor_id:id,patient_id:id
+demo_visit_1,"High fever, feeling unwell, breathing problems",scheduled,2025-04-04 11:00:00,2025-04-04 11:15:00,hr_hospital.hh_doctor_demo_3,hr_hospital.hh_patient_1
+demo_visit_2,"Periodic episodes of extreme pain, swelling of hands and feet",canceled,2025-04-03 09:30:00,2025-04-03 09:30:00,hr_hospital.hh_doctor_demo_6,hr_hospital.hh_patient_2
+demo_visit_3,"Periodic episodes of extreme pain, swelling of hands and feet",scheduled,2025-04-03 12:15:00,2025-04-03 12:15:00,hr_hospital.hh_doctor_demo_5,hr_hospital.hh_patient_2
+demo_visit_4,"High temperature, headache, muscle pains",scheduled,2025-04-07 09:00:00,2025-04-07 09:00:00,hr_hospital.hh_doctor_demo_4,hr_hospital.hh_patient_3
